@@ -1,0 +1,189 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes perspective {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(50deg);
+  }
+}
+
+@keyframes vertHeight {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+html, body, #root {
+  padding: 0;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  background: #263238;
+  height: 100%;
+}
+
+.index-component {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column
+}
+
+.modal-component {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(10, 10, 10, .6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-component .modal-content {
+  padding: 40px;
+  background: #fff;
+}
+.modal-component .modal-content .error {
+  color: red
+}
+
+.tips-component {
+  transition: all .3s;
+  color: #BEC3CD;
+  height: 20px;
+}
+
+.keyboard-component {
+  perspective: 80rem;
+}
+.keyboard {
+  display: flex;
+  position: relative;
+  padding: 5px;
+  box-shadow: 0 0 2px;
+  opacity: 1;
+  animation-name: perspective, fadeIn;
+  animation-duration: 1s;
+  transform: rotateX(50deg);
+}
+.keyboard .region {
+  height: 200px;
+  min-width: 250px;
+  margin: 5px;
+  background: rgba(50, 50, 50, 1);
+  border: 5px solid #222E34;
+  cursor: pointer;
+}
+
+.color-picker-component {
+  transition: all .3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  padding: 25px;
+  box-shadow: 0 0 5px #000;
+  background: #37474F;
+  transform: translate(-50%);
+  z-index: 2;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+}
+.color-picker-component.active {
+  visibility: visible;
+  opacity: 1;
+}
+.color-picker-component .color {
+  transition: all .3s;
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  cursor: pointer;
+  opacity: .9;
+}
+.color-picker-component .color:hover {
+  opacity: 1
+}
+.color-picker-component .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #171717;
+  padding: 6px;
+  height: 15px;
+  width: 15px;
+  text-align: center;
+  font-size: 15px;
+  box-shadow: 0 0 1px #000;
+  cursor: pointer;
+  color: #555;
+}
+
+.vert-line {
+  display: block;
+  clear: both;
+  width: 1px;
+  height: 50px;
+  background: #1EC1C8;
+  opacity: 1;
+  animation-duration: 2s;
+  animation-name: fadeIn, vertHeight;
+}
+
+.button.submit {
+  display: block;
+  clear: both;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  background: #1EC1C8;
+  box-shadow: 0 0 2px #000;
+  display: block;
+  margin: 20px auto;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 0 5px #000;
+  outline: none;
+  animation: 1s fadeIn;
+}
+
+.button.toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 60px;
+  height: 25px;
+  background: #28292e;
+  transition: all .3s;
+  cursor: pointer;
+  box-shadow: 0 0 1px #000 inset;
+}
+.button.toggle .handle {
+  background: #333439;
+  height: 100%;
+  width: 50%;
+  transition: all .3s;
+  box-shadow: 0 0 3px #000;
+}
+.button.toggle.active .handle {
+  margin-left: 50%;
+  background: #1EC1C8;
+}
