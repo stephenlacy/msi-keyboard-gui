@@ -82,6 +82,10 @@ html, body, #root {
   animation-name: perspective, fadeIn;
   animation-duration: 1s;
   transform: rotateX(50deg);
+  transition: opacity .4s;
+}
+.keyboard.off {
+  opacity: .5
 }
 .keyboard .region {
   height: 200px;

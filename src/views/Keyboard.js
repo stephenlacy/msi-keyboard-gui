@@ -1,10 +1,9 @@
 import { Component } from 'react'
+import classNames from 'classnames'
 
 module.exports = class KeyboardView extends Component {
   constructor (props) {
     super(props)
-    this.state = {
-    }
   }
 
   componentDidMount () {
@@ -13,7 +12,9 @@ module.exports = class KeyboardView extends Component {
 
   render () {
     return <div className='keyboard-component'>
-      <div className='keyboard'>
+      <div className={classNames('keyboard', {
+        off: !this.props.on
+      })}>
         <div
           className='region left'
           style={{
