@@ -33,7 +33,8 @@ module.exports = class App extends Component {
     })
   }
 
-  setKeyboard (regions) {
+  setKeyboard (regions, on) {
+    if (on) this.setState({ on })
     for (const k in regions) {
       if (!regions[k]) return
       keyboard.color(k, {
@@ -112,6 +113,7 @@ module.exports = class App extends Component {
       </div>
 
       <KeyboardView
+        on={this.state.on}
         initialColors={this.state.colors}
         handleColorClick={(e) => this.handleColorClick(e)}
         handleColors={(e) => this.handleColors(e)}/>
@@ -119,7 +121,7 @@ module.exports = class App extends Component {
       <div className='vert-line' />
 
       <button
-        onClick={() => this.setKeyboard(this.state.colors)}
+        onClick={() => this.setKeyboard(this.state.colors, true)}
         className='button submit'>
         set colors
         </button>
