@@ -13,7 +13,8 @@ function createMainWindow () {
     title: app.getName(),
     height: 500,
     width: 960,
-    backgroundColor: '#263238'
+    backgroundColor: '#263238',
+    icon: __dirname + '/assets/logo.png'
   });
   win.loadURL('file://' + __dirname + '/src/index.html');
   win.setMenu(null);
