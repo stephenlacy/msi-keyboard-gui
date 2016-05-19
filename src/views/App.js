@@ -4,6 +4,7 @@ import { colors } from 'msi-keyboard/lib/constants'
 import keyboard from '../lib/keyboard'
 import KeyboardView from './Keyboard'
 import ColorPicker from './ColorPicker'
+import Selector from './Selector'
 
 module.exports = class App extends Component {
   constructor (props) {
@@ -12,6 +13,7 @@ module.exports = class App extends Component {
       error: null,
       on: true,
       tip: 'Click on a region to choose a color',
+      mode: null,
       colors: {
         left: 'red',
         middle: 'blue',
@@ -31,6 +33,10 @@ module.exports = class App extends Component {
       colors: Object.assign(this.state.colors, opts),
       choose: null
     })
+  }
+
+  handleSelector (mode) {
+    this.setState({mode})
   }
 
   setKeyboard (regions, on) {
@@ -71,9 +77,17 @@ module.exports = class App extends Component {
     this.setState({choose: null})
   }
 
-  // setMode () {
-  //   keyboard.mode('breathe', this.state.colors)
-  // }
+  setMode () {
+    this.setState({mode: null})
+    keyboard.mode(this.state.mode, {
+      left: {color: this.state.colors.left},
+      middle: {color: this.state.colors.middle},
+      right: {color: this.state.colors.right}
+    })
+    if (this.state.mode === 'normal') {
+      this.setKeyboard(this.state.colors)
+    }
+  }
 
   render () {
     let errorEl
@@ -124,6 +138,25 @@ module.exports = class App extends Component {
         onClick={() => this.setKeyboard(this.state.colors, true)}
         className='button submit'>
         set colors
+        </button>
+
+      <Selector
+        items={[
+          'breathe',
+          'wave',
+          'normal'
+        ]}
+        handleSelector={(e) => this.handleSelector(e)}
+        />
+
+      <button
+        onClick={() => this.setMode()}
+        style={{
+          opacity: this.state.mode ? 1 : 0,
+          visibility: this.state.mode ? 'visible' : 'hidden'
+        }}
+        className='button submit'>
+        set mode
         </button>
     </div>
   }
