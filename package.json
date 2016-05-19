@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "electron-debug": "^0.7.0",
-    "msi-keyboard": "^0.3.0"
+    "msi-keyboard": "^0.3.1"
   },
   "devDependencies": {
     "babel": "^6.5.2",

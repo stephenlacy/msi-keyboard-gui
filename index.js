@@ -11,7 +11,7 @@ let mainWindow;
 function createMainWindow () {
   const win = new electron.BrowserWindow({
     title: app.getName(),
-    height: 500,
+    height: 550,
     width: 960,
     backgroundColor: '#263238',
     icon: __dirname + '/assets/logo.png'
