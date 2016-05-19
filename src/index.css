@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -102,7 +109,7 @@ html, body, #root {
   top: 50%;
   left: 50%;
   margin: 0 auto;
-  padding: 25px;
+  padding: 10px;
   box-shadow: 0 0 5px #000;
   background: #37474F;
   transform: translate(-50%);
@@ -128,14 +135,14 @@ html, body, #root {
 }
 .color-picker-component .close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -10px;
+  right: -10px;
   background: #171717;
-  padding: 6px;
-  height: 15px;
-  width: 15px;
+  padding: 0 4px;
+  height: 25px;
+  width: 25px;
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
   box-shadow: 0 0 1px #000;
   cursor: pointer;
   color: #555;
@@ -167,6 +174,13 @@ html, body, #root {
   box-shadow: 0 0 5px #000;
   outline: none;
   animation: 1s fadeIn;
+  opacity: 1;
+  transition: opacity .3s
+}
+
+.button.submit:active {
+  opacity: .9;
+  box-shadow: 0 0 5px #1EC1C8
 }
 
 .button.toggle {
@@ -190,4 +204,41 @@ html, body, #root {
 .button.toggle.active .handle {
   margin-left: 50%;
   background: #1EC1C8;
+}
+
+.selector-component {
+  width: 150px;
+  text-align: center;
+  position: relative;
+  height: 30px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.selector-component .head {
+  width: 150px;
+  padding: 10px 15px;
+  background: rgb(50,67,73);
+  color: white;
+  box-shadow: 0 0 2px #000;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+.selector-component .list {
+  display: none;
+  width: 100%;
+}
+
+.selector-component .list.active {
+  display: block
+}
+
+.selector-component .item {
+  padding: 5px;
+  background: #cdcdcd;
+  width: 100%;
+  transition: background .3s;
+}
+
+.selector-component .item:hover {
+  background: #bababa;
 }
