@@ -10,11 +10,23 @@
 
 ## Install
 
+From development:
+
 ```
 $ git clone https://github.com/stevelacy/msi-keyboard-gui
 $ cd msi-keyboard-gui
 $ npm install
 $ sudo npm start
+
+```
+
+From prebuilt binaries:
+
+Download the latest from the [releases](https://github.com/stevelacy/msi-keyboard-gui/releases)
+```
+
+$ unzip ./msi-keyboard-gui* -d ./msi-keyboard-gui
+$ sudo ./msi-keyboard-gui
 
 ```
 
