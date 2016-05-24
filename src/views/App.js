@@ -14,6 +14,7 @@ module.exports = class App extends Component {
       on: true,
       tip: 'Click on a region to choose a color',
       mode: null,
+      about: false,
       colors: {
         left: 'red',
         middle: 'blue',
@@ -66,6 +67,10 @@ module.exports = class App extends Component {
     })
   }
 
+  toggleAbout () {
+    this.setState({about: !this.state.about})
+  }
+
   handleColor (color, num) {
     let obj = {}
     obj[this.state.choose] = color
@@ -90,9 +95,9 @@ module.exports = class App extends Component {
   }
 
   render () {
-    let errorEl
+    let ErrorEl
     if (this.state.error) {
-      errorEl = <div className='modal-component'>
+      ErrorEl = <div className='modal-component'>
         <div className='modal-content'>
           <h2> Error </h2>
           <pre className='error'>
@@ -100,6 +105,19 @@ module.exports = class App extends Component {
           </pre>
           <br />
           Did you try using sudo?
+        </div>
+      </div>
+    }
+    let AboutEl
+    if (this.state.about) {
+      AboutEl = <div
+        onClick={() => this.toggleAbout()}
+        className='modal-component'>
+        <div
+          onClick={(e) => e.preventDefault()}
+          className='modal-content'>
+          <h2> About </h2>
+          https://github.com/stevelacy/msi-keyboard-gui
         </div>
       </div>
     }
@@ -111,8 +129,9 @@ module.exports = class App extends Component {
       region={this.state.choose} />
 
     return <div className='index-component'>
-      {errorEl}
+      {ErrorEl}
       {ColorEl}
+      {AboutEl}
       <div
         title={this.state.on ? 'on' : 'off'}
         onClick={() => this.toggleOn()}
@@ -158,6 +177,12 @@ module.exports = class App extends Component {
         className='button submit'>
         set mode
         </button>
+
+        <div
+          onClick={() => this.toggleAbout()}
+          className='about-box'>
+        ?
+        </div>
     </div>
   }
 }

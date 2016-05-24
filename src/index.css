@@ -43,6 +43,10 @@ html, body, #root {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .index-component {
   height: 100%;
   display: flex;
@@ -62,6 +66,7 @@ html, body, #root {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 20;
 }
 .modal-component .modal-content {
   padding: 40px;
@@ -241,4 +246,15 @@ html, body, #root {
 
 .selector-component .item:hover {
   background: #bababa;
+}
+
+.about-box {
+  width: 40px;
+  height: 40px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 50%;
+  background: rgb(50,67,73);
+  color: #fff;
+  cursor: pointer;
 }
