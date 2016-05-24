@@ -1,5 +1,7 @@
 {
   "name": "msi-keyboard-gui",
+  "version": "0.1.0",
+  "description": "The First fully featured GUI MSI Keyboard controller for Linux",
   "author": "Steve Lacy <me@slacy.me> http://slacy.me",
   "scripts": {
     "start": "electron .",
