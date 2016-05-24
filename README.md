@@ -26,7 +26,7 @@ Download the latest from the [releases](https://github.com/stevelacy/msi-keyboar
 ```
 
 $ unzip ./msi-keyboard-gui* -d ./msi-keyboard-gui
-$ sudo ./msi-keyboard-gui
+$ sudo ./msi-keyboard-gui/msi-keyboard-gui
 
 ```
 
