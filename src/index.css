@@ -71,11 +71,24 @@ a {
 .modal-component .modal-content {
   padding: 40px;
   background: #fff;
+  position: relative;
 }
 .modal-component .modal-content .error {
   color: red
 }
 
+.modal-component .modal-content .close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  background: rgba(200, 200, 200, 1)
+}
 .tips-component {
   transition: all .3s;
   color: #BEC3CD;
@@ -249,9 +262,12 @@ a {
 }
 
 .about-box {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
   width: 40px;
   height: 40px;
-  padding: 15px;
+  padding: 12px;
   text-align: center;
   border-radius: 50%;
   background: rgb(50,67,73);

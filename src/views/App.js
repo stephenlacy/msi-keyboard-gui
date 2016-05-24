@@ -67,8 +67,10 @@ module.exports = class App extends Component {
     })
   }
 
-  toggleAbout () {
-    this.setState({about: !this.state.about})
+  toggleAbout (e) {
+    if (!e) return this.setState({about: !this.state.about})
+    if (e.target.className === 'modal-component')
+      this.setState({about: !this.state.about})
   }
 
   handleColor (color, num) {
@@ -111,13 +113,22 @@ module.exports = class App extends Component {
     let AboutEl
     if (this.state.about) {
       AboutEl = <div
-        onClick={() => this.toggleAbout()}
+        onClick={(e) => this.toggleAbout(e)}
         className='modal-component'>
         <div
-          onClick={(e) => e.preventDefault()}
           className='modal-content'>
+          <div className='close'
+            onClick={() => this.toggleAbout()}> ✕ </div>
           <h2> About </h2>
+          <b> github repository: </b>
           https://github.com/stevelacy/msi-keyboard-gui
+          <br />
+          <b> Report an issue: </b>
+          https://github.com/stevelacy/msi-keyboard-gui/issues
+          <br />
+          <br />
+          <b> Created by: </b>
+          Steve Lacy - http://slacy.me
         </div>
       </div>
     }
