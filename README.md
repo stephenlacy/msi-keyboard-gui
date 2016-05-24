@@ -4,6 +4,10 @@
 
 ![msi-keyboard](assets/logo.png)
 
+![Linux](https://img.shields.io/badge/Linux-epic-brightgreen.svg)
+
+![msi-keyboard](assets/1.png)
+
 ## Install
 
 ```
@@ -12,13 +16,31 @@ $ cd msi-keyboard-gui
 $ npm install
 $ sudo npm start
 
+```
+
 ## Usage
 
 1. Click on a region to select a color
 2. Choose a color
 3. Click "Set Color" to activate the keyboard
 
-![msi-keyboard](assets/1.png)
 
+## Modes
 
-## ![License](License) (MIT)
+Click on "Set Mode" to choose a mode. The currently supported modes are:
+
+  wave
+  breathe
+  normal
+
+By default the normal mode is used to light all three regions of the keyboard.
+
+#### Device support requested
+
+If this project works on your system please send a commit adding your device description to [this list](SUPPORTED.md)
+
+#### Contributions welcome!
+If you find a bug or issue please check the [github issues](https://github.com/stevelacy/msi-keyboard-gui/issues) or open an new one.
+Feature requests / pull requests are welcome!
+
+## [License](LICENSE) (MIT)
