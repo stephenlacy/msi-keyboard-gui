@@ -5,7 +5,7 @@
   "author": "Steve Lacy <me@slacy.me> http://slacy.me",
   "scripts": {
     "start": "electron .",
-    "build:linux": "electron-packager . --overwrite --asar --out=dist  --platform=linux --arch=x64 --app-bundle-id=com.stevelacy.msikeyboard --app-version=$npm_package_version "
+    "build:linux": "electron-packager . --overwrite --asar --out=dist  --platform=linux --arch=x64 --app-bundle-id=com.stevelacy.msikeyboard --app-version=$npm_package_version && cd dist/msi-keyboard-gui-linux-x64/ && zip -ryq9 ../msi-keyboard-gui-linux-${npm_package_version}.zip * "
   },
   "dependencies": {
     "electron-debug": "^0.7.0",
