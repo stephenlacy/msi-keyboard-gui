@@ -12,6 +12,8 @@
 
 From development:
 
+Install the required libraries for your OS: `libusb-dev` or `libusb-1.0-0-dev`
+
 ```
 $ git clone https://github.com/stevelacy/msi-keyboard-gui
 $ cd msi-keyboard-gui
