@@ -12,7 +12,8 @@
 
 From development:
 
-Install the required libraries for your OS: `libusb-dev` or `libusb-1.0-0-dev`
+- Install the required libraries for your OS: `libusb-dev` or `libusb-1.0-0-dev`
+- Node.js version 6+ is required due to `node-hid` bindings
 
 ```
 $ git clone https://github.com/stevelacy/msi-keyboard-gui
