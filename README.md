@@ -6,7 +6,7 @@
 
 ![Linux](https://img.shields.io/badge/Linux-epic-brightgreen.svg)
 
-![msi-keyboard](assets/1.png)
+![msi-keyboard](assets/2.png)
 
 ## Install
 

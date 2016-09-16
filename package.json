@@ -3,6 +3,11 @@
   "version": "0.1.1",
   "description": "The First fully featured GUI MSI Keyboard controller for Linux",
   "author": "Steve Lacy <me@slacy.me> http://slacy.me",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevelacy/msi-keyboard-gui"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "npm i electron-prebuilt@1.1.0 && ./node_modules/.bin/electron-rebuild && electron .",
     "build:linux": "./node_modules/.bin/electron-rebuild && electron-packager . --overwrite --asar --out=dist  --platform=linux --arch=x64 --app-bundle-id=com.stevelacy.msikeyboard --app-version=$npm_package_version && cd dist/msi-keyboard-gui-linux-x64/ && zip -ryq9 ../msi-keyboard-gui-linux-${npm_package_version}.zip * "
