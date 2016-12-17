@@ -9,11 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "npm i electron-prebuilt@1.1.0 && ./node_modules/.bin/electron-rebuild && electron .",
-    "build:linux": "./node_modules/.bin/electron-rebuild && electron-packager . --overwrite --asar --out=dist  --platform=linux --arch=x64 --app-bundle-id=com.stevelacy.msikeyboard --app-version=$npm_package_version && cd dist/msi-keyboard-gui-linux-x64/ && zip -ryq9 ../msi-keyboard-gui-linux-${npm_package_version}.zip * "
+    "start": "electron-rebuild && electron .",
+    "build:linux": "electron-rebuild && electron-packager . --overwrite --asar --out=dist --platform=linux --arch=x64 --app-bundle-id=com.stevelacy.msikeyboard --app-version=$npm_package_version && cd dist/msi-keyboard-gui-linux-x64/ && zip -ryq9 ../msi-keyboard-gui-linux-${npm_package_version}.zip * "
   },
   "dependencies": {
-    "electron-debug": "^0.7.0",
+    "electron-debug": "^1.1.0",
     "msi-keyboard": "^0.3.1"
   },
   "devDependencies": {
@@ -22,11 +22,17 @@
     "babel-preset-react": "^6.5.0",
     "babel-register": "^6.8.0",
     "classnames": "^2.2.5",
-    "electron-packager": "^7.0.2",
-    "electron-prebuilt": "^1.1.0",
-    "electron-rebuild": "^1.1.4",
+    "electron-packager": "^8.4.0",
+    "electron-prebuilt": "^1.4.12",
+    "electron-rebuild": "^1.4.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-router": "^2.4.0"
-  }
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "os": [
+    "linux"
+  ]
 }
