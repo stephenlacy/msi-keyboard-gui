@@ -10,6 +10,8 @@
 
 ## Install
 
+#### Node.js 6+ is REQUIRED
+
 From development:
 
 - Install the required libraries for your OS: `libusb-dev` or `libusb-1.0-0-dev`
