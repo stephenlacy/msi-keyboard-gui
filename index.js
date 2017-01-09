@@ -4,7 +4,7 @@ const path = require('path');
 const electron = require('electron');
 
 const app = electron.app;
-require('electron-debug')();
+require('electron-debug')({ enabled: true });
 
 let mainWindow;
 
