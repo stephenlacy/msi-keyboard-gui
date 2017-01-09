@@ -30,8 +30,8 @@ From prebuilt binaries:
 Download the latest from the [releases](https://github.com/stevelacy/msi-keyboard-gui/releases)
 ```
 
-$ unzip ./msi-keyboard-gui* -d ./msi-keyboard-gui
-$ sudo ./msi-keyboard-gui/msi-keyboard-gui
+$ tar -xf ./msi-keyboard-gui-linux*.tar.gz
+$ sudo ./msi-keyboard-gui-linux-x64/msi-keyboard-gui
 
 ```
 
