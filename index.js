@@ -23,3 +23,7 @@ function createMainWindow () {
 app.on('ready', function() {
   mainWindow = createMainWindow();
 });
+
+app.on('window-all-closed', function() {
+  app.quit();
+});
