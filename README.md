@@ -10,9 +10,18 @@
 
 ## Install
 
-#### Node.js 6+ is REQUIRED
+#### [Node.js](https://nodejs.org/) 6+ is REQUIRED
 
-From development:
+#### From prebuilt binaries:
+
+Download the latest from the [releases](https://github.com/stevelacy/msi-keyboard-gui/releases)
+```
+
+$ tar -xf ./msi-keyboard-gui-linux*.tar.gz
+$ sudo ./msi-keyboard-gui-linux-x64/msi-keyboard-gui
+
+```
+#### From development:
 
 - Install the required libraries for your OS: `libusb-dev` or `libusb-1.0-0-dev`
 - Node.js version 6+ is required due to `node-hid` bindings
@@ -22,16 +31,6 @@ $ git clone https://github.com/stevelacy/msi-keyboard-gui
 $ cd msi-keyboard-gui
 $ npm install
 $ sudo npm start
-
-```
-
-From prebuilt binaries:
-
-Download the latest from the [releases](https://github.com/stevelacy/msi-keyboard-gui/releases)
-```
-
-$ tar -xf ./msi-keyboard-gui-linux*.tar.gz
-$ sudo ./msi-keyboard-gui-linux-x64/msi-keyboard-gui
 
 ```
 
