@@ -191,9 +191,7 @@ module.exports = class App extends Component {
 
         <div
           onClick={() => this.toggleAbout()}
-          className='about-box'>
-        ?
-        </div>
+          className='about-box'>?</div>
     </div>
   }
 }
