@@ -1,12 +1,18 @@
 'use strict';
 
+let mainWindow;
+process.on('uncaughtException', function (e) {
+  console.error(e);
+  if (mainWindow && mainWindow.webContents) {
+    mainWindow.webContents.openDevTools();
+  }
+});
+
 const path = require('path');
 const electron = require('electron');
 
 const app = electron.app;
 require('electron-debug')({ enabled: true });
-
-let mainWindow;
 
 function createMainWindow () {
   const win = new electron.BrowserWindow({
