@@ -2,6 +2,8 @@
 
 > The First fully featured GUI MSI Keyboard controller for Linux
 
+**Windows now supported!**
+
 ![msi-keyboard](assets/logo.png)
 
 ![Linux](https://img.shields.io/badge/Linux-epic-brightgreen.svg)
@@ -15,13 +17,20 @@
 #### From prebuilt binaries:
 
 Download the latest from the [releases](https://github.com/stevelacy/msi-keyboard-gui/releases)
+
+Linux:
 ```
 
 $ tar -xf ./msi-keyboard-gui-linux*.tar.gz
 $ sudo ./msi-keyboard-gui-linux-x64/msi-keyboard-gui
 
 ```
-#### From development:
+
+Windows:
+
+Extract zip file and run `msi-keyboard-gui-win32-x64\msi-keyboard-gui.exe`
+
+#### Linux From development:
 
 - Install the required libraries for your OS: `libusb-dev` or `libusb-1.0-0-dev`
 - Node.js version 6+ is required due to `node-hid` bindings
@@ -33,6 +42,17 @@ $ npm install
 $ sudo npm start
 
 ```
+
+### Windows From development:
+- Node.js version 6+ is required due to `node-hid` bindings
+
+```
+$ git clone https://github.com/stevelacy/msi-keyboard-gui
+$ cd msi-keyboard-gui
+$ npm install
+$ npm run start:windows
+```
+
 
 ## Usage
 
