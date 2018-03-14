@@ -18,7 +18,7 @@
 
 Download the latest from the [releases](https://github.com/stevelacy/msi-keyboard-gui/releases)
 
-Linux:
+#### Linux:
 ```
 
 $ tar -xf ./msi-keyboard-gui-linux*.tar.gz
@@ -26,7 +26,7 @@ $ sudo ./msi-keyboard-gui-linux-x64/msi-keyboard-gui
 
 ```
 
-Windows:
+#### Windows:
 
 Extract zip file and run `msi-keyboard-gui-win32-x64\msi-keyboard-gui.exe`
 
@@ -43,7 +43,7 @@ $ sudo npm start
 
 ```
 
-### Windows From development:
+#### Windows From development:
 - Node.js version 6+ is required due to `node-hid` bindings
 
 ```
