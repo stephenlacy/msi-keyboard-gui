@@ -43,6 +43,8 @@ $ sudo npm start
 
 ```
 
+Note: if you get the error `No protocol specified` when using the user `root` on linux add the user `root` to your xauthority xhost config with: `xhost si:localuser:root` and try `sudo npm start`
+
 #### Windows From development:
 - Node.js version 6+ is required due to `node-hid` bindings
 

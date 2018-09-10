@@ -29,7 +29,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.8.0",
     "electron": "^1.8.8",
-    "electron-packager": "^8.4.0"
+    "electron-packager": "^12.1.1"
   },
   "engines": {
     "node": ">=6.0.0"
