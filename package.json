@@ -1,6 +1,6 @@
 {
   "name": "msi-keyboard-gui",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "The First fully featured GUI MSI Keyboard controller for Linux (And Windows)",
   "author": "Steve Lacy <me@slacy.me> http://slacy.me",
   "repository": {
