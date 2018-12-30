@@ -2,7 +2,7 @@
 
 > The First fully featured GUI MSI Keyboard controller for Linux
 
-**Windows now supported!**
+**Windows and Macos now supported!**
 
 ![msi-keyboard](assets/logo.png)
 
@@ -53,6 +53,16 @@ $ git clone https://github.com/stevelacy/msi-keyboard-gui
 $ cd msi-keyboard-gui
 $ npm install
 $ npm run start:windows
+```
+
+#### Macos From development:
+- Node.js version 6+ is required due to `node-hid` bindings
+
+```
+$ git clone https://github.com/stevelacy/msi-keyboard-gui
+$ cd msi-keyboard-gui
+$ npm install
+$ sudo npm run start:macos
 ```
 
 

@@ -10,15 +10,18 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build:app:linux && electron ./dist/app",
+    "start:macos": "npm run build:app:macos && electron ./dist/app",
     "start:windows": "npm run build:app:windows && electron ./dist/app",
     "build:linux": "npm run build:app:linux && electron-packager ./dist/app/ --overwrite --out=dist --electron-version=1.8.8 --platform=linux --arch=x64 --app-bundle-id=com.stevelacy.msikeyboard --app-version=$npm_package_version && cd dist/ && tar -czvf ./msi-keyboard-gui-linux-${npm_package_version}.tar.gz msi-keyboard-gui-linux-x64/*",
     "build:windows": "npm run build:app:windows && electron-packager ./dist/app/ --overwrite --out=dist --electron-version=1.7.8 --platform=win32 --arch=x64 --app-bundle-id=com.stevelacy.msikeyboard --app-version=%npm_package_version% && cd dist/",
+    "build:macos": "npm run build:app:macos && electron-packager ./dist/app/ --overwrite --out=dist --electron-version=1.8.4 --platform=darwin --arch=x64 --app-bundle-id=com.stevelacy.msikeyboard --app-version=%npm_package_version% && cd dist/",
     "build:app:linux": "npm rebuild --runtime=electron --target=1.8.8 --disturl=https://atom.io/download/atom-shell --npm_config_build_from_source=true && babel src/ --out-dir ./dist/app/src/ && cp -t ./dist/app/src/ ./src/index.html ./src/index.css && cp -rt ./dist/app/ index.js package.json node_modules LICENSE",
-    "build:app:windows": "npm rebuild --runtime=electron --target=1.8.8 --disturl=https://atom.io/download/atom-shell --npm_config_build_from_source=true && babel src/ --out-dir .\\dist\\app\\src\\ && copy .\\src\\index.html .\\dist\\app\\src\\ && copy .\\src\\index.css .\\dist\\app\\src\\ && copy index.js .\\dist\\app\\ && copy package.json .\\dist\\app\\ && xcopy .\\node_modules .\\dist\\app\\node_modules\\ /e/i/h/y/a && copy LICENSE .\\dist\\app\\"
+    "build:app:windows": "npm rebuild --runtime=electron --target=1.8.8 --disturl=https://atom.io/download/atom-shell --npm_config_build_from_source=true && babel src/ --out-dir .\\dist\\app\\src\\ && copy .\\src\\index.html .\\dist\\app\\src\\ && copy .\\src\\index.css .\\dist\\app\\src\\ && copy index.js .\\dist\\app\\ && copy package.json .\\dist\\app\\ && xcopy .\\node_modules .\\dist\\app\\node_modules\\ /e/i/h/y/a && copy LICENSE .\\dist\\app\\",
+    "build:app:macos": "npm rebuild --runtime=electron --target=1.8.8 --disturl=https://atom.io/download/atom-shell --npm_config_build_from_source=true && babel src/ --out-dir ./dist/app/src/ && cp ./src/index.html ./src/index.css ./dist/app/src/  && rm -rf ./dist/app/node_modules && cp -R index.js package.json node_modules LICENSE ./dist/app/"
   },
   "dependencies": {
     "electron-debug": "^1.1.0",
-    "msi-keyboard": "^0.4.1",
+    "msi-keyboard": "^0.5.0",
     "react": "^15.0.2",
     "classnames": "^2.2.5",
     "react-dom": "^15.0.2"
@@ -36,6 +39,7 @@
   },
   "os": [
     "linux",
-    "win32"
+    "win32",
+    "darwin"
   ]
 }
