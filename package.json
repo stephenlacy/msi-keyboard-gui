@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "electron-debug": "^1.1.0",
-    "msi-keyboard": "^0.5.0",
+    "msi-keyboard": "^0.6.0",
     "react": "^15.0.2",
     "classnames": "^2.2.5",
     "react-dom": "^15.0.2"
