@@ -21,5 +21,6 @@
 | Ubuntu 18.04.1 | 4.15.0-39-generic      | 8.10.0       | 3.5.2       | none           | MSI GT70 2PE Dominator Pro |
 | Ubuntu 18.04.1 | 4.15.0-44-generic      | 10.15.0      | 6.4.1       | 2:1.0.21-2     | MSI GS63 7RE Stealth Pro   |
 | Ubuntu 18.04.5 | 4.15.0.135-generic     | 8.10.0       | 3.5.2       | 2:1.0.21-2     | MSI GE70 2PE Apache Pro    |
+| Pop!_OS 21.04  | 5.11.0-7620-generic    | 14.17.0      | 6.14.13     | 2:1.0.24-3     | MSI GP73 8RE Leopard       |
 
 [1]: https://wiki.ubuntu.com/Kernel/LTSEnablementStack#Ubuntu_16.04_LTS_-_Xenial_Xerus
